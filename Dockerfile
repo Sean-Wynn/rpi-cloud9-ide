@@ -2,7 +2,7 @@
 # Based on a work at https://github.com/docker/docker.
 # ------------------------------------------------------------------------------
 # Pull base image.
-FROM resin/rpi-raspbian:stretch
+FROM resin/rpi-raspbian:jessie
 MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
 
 # ------------------------------------------------------------------------------
@@ -39,7 +39,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     liblzma-dev \
     libmagickcore-dev \
     libmagickwand-dev \
-    default-libmysqlclient-dev \
+    libmysqlclient-dev \
     libncurses-dev \
     libpng-dev \
     libpq-dev \
