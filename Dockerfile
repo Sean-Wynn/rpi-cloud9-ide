@@ -11,7 +11,9 @@ MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
 
 # ------------------------------------------------------------------------------
 # Install nodejs
-RUN apt-get update && apt-get install -y --no-install-recommends \
+RUN apt-get update
+RUN apt-get install -y --no-install-recommends -t=jessie libssl-dev
+RUN apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     wget \
@@ -45,7 +47,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     libpq-dev \
     libreadline-dev \
     libsqlite3-dev \
-    libssl-dev \
+#    libssl-dev \
     libtool \
     libwebp-dev \
     libxml2-dev \
