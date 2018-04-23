@@ -5,6 +5,7 @@
 FROM resin/rpi-raspbian:stretch
 MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
 
+RUN echo "deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi" >> /etc/apt/sources.list
 # ------------------------------------------------------------------------------
 # Install dependencies
  RUN apt-get update && sudo apt-get upgrade
