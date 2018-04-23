@@ -62,7 +62,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 # ------------------------------------------------------------------------------
 RUN cd /usr/local 
 RUN wget http://nodejs.org/dist/v9.7.1/node-v9.7.1-linux-armv7l.tar.gz
-RUN tar -xzvf node-v0.10.28-linux-arm-pi.tar.gz --strip=1 
+RUN tar -xzvf node-v9.7.1-linux-armv7l.tar.gz --strip=1 
 RUN export NODE_PATH=”/usr/local/lib/node_modules”
 
 CMD [ "node" ]
