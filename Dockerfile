@@ -58,6 +58,8 @@ RUN apt-get install -y --no-install-recommends \
     patch \
     xz-utils \
     zlib1g-dev \
+    oracle-java8-jdk \
+    emacs \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get clean
 
@@ -85,6 +87,13 @@ VOLUME /cloud9/workspace
 # ------------------------------------------------------------------------------
 # Set default workspace dir
 ENV C9_WORKSPACE /cloud9/workspace
+
+# ------------------------------------------------------------------------------
+# Install spacemacs
+RUN git clone https://github.com/sy120bnr/spacemacs ~/emacs.d
+
+# ------------------------------------------------------------------------------
+# Set default workspace dir
 
 # ------------------------------------------------------------------------------
 # Clean up APT when done.
