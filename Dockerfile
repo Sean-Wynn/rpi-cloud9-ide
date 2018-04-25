@@ -87,7 +87,7 @@ ENV C9_WORKSPACE /cloud9/workspace
 
 # ------------------------------------------------------------------------------
 # Install spacemacs
-RUN git clone https://github.com/sy120bnr/spacemacs ~/emacs.d
+RUN git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # ------------------------------------------------------------------------------
 # Clean up APT when done.
