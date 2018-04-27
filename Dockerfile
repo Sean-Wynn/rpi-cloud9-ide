@@ -90,6 +90,22 @@ ENV C9_WORKSPACE /cloud9/workspace
 RUN git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # ------------------------------------------------------------------------------
+# Install clojure
+RUN cd /tmp
+RUN curl -O https://download.clojure.org/install/linux-install-1.9.0.375.sh
+RUN chmod +x linux-install-1.9.0.375.sh
+RUN ./linux-install-1.9.0.375.sh
+
+# ------------------------------------------------------------------------------
+# Install leiningen
+RUN mkdir ~/bin
+RUN cd ~/bin
+RUN curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
+RUN chmod a+x ~/bin/lein
+RUN ~/bin/lein
+
+
+# ------------------------------------------------------------------------------
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
