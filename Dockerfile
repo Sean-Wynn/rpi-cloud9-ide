@@ -98,11 +98,11 @@ RUN ./linux-install-1.9.0.375.sh
 
 # ------------------------------------------------------------------------------
 # Install leiningen
-RUN mkdir ~/bin
-RUN cd ~/bin
-RUN curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein
-RUN chmod a+x ~/bin/lein
-RUN ~/bin/lein
+RUN mkdir ~/bin && \
+    cd ~/bin && \
+    curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && \
+    chmod a+x ~/bin/lein && \
+    ~/bin/lein
 
 
 # ------------------------------------------------------------------------------
