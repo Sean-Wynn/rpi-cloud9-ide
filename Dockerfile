@@ -102,7 +102,8 @@ RUN mkdir ~/bin && \
     cd ~/bin && \
     curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && \
     chmod a+x ~/bin/lein && \
-    ~/bin/lein
+    ~/bin/lein && \
+    export PATH=$PATH;/root/bin
 
 
 # ------------------------------------------------------------------------------
