@@ -59,6 +59,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     emacs \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get clean
+  
+# ------------------------------------------------------------------------------
+# Symlink .emacs.d
+RUN ln -s /workspace/.emacs.d ~/.emacs.d
 
 #Unpack and install node
 # ------------------------------------------------------------------------------
