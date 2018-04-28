@@ -5,6 +5,8 @@
 FROM resin/rpi-raspbian:jessie
 MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
 
+ENV PATH="/root/bin:${PATH}"
+
 # ------------------------------------------------------------------------------
 # Install dependencies
  RUN apt-get update && sudo apt-get upgrade
@@ -107,7 +109,6 @@ RUN mkdir ~/bin && \
     curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && \
     chmod a+x ~/bin/lein && \
     ~/bin/lein
-ENV PATH="/root/bin:${PATH}"
 
 
 # ------------------------------------------------------------------------------
