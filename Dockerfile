@@ -59,10 +59,6 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     emacs \
   && rm -rf /var/lib/apt/lists/* \
   && apt-get clean
-  
-# ------------------------------------------------------------------------------
-# Symlink .emacs.d
-RUN ln -s /workspace/.emacs.d ~/.emacs.d
 
 #Unpack and install node
 # ------------------------------------------------------------------------------
@@ -90,8 +86,12 @@ VOLUME /cloud9/workspace
 ENV C9_WORKSPACE /cloud9/workspace
 
 # ------------------------------------------------------------------------------
+# Symlink .emacs.d
+RUN ln -s /cloud9/workspace/.emacs.d ~/.emacs.d
+
+# ------------------------------------------------------------------------------
 # Install spacemacs
-RUN git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+# RUN git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
 
 # ------------------------------------------------------------------------------
 # Install clojure
