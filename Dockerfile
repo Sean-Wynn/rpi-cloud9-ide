@@ -87,7 +87,7 @@ ENV C9_WORKSPACE /cloud9/workspace
 
 # ------------------------------------------------------------------------------
 # Symlink .emacs.d
-RUN ln -s /cloud9/workspace/.emacs.d ~/.emacs.d
+RUN ln -s /workspace/.emacs.d ~/.emacs.d
 
 # ------------------------------------------------------------------------------
 # Install spacemacs
