@@ -97,18 +97,17 @@ RUN ln -s /workspace/.emacs.d ~/.emacs.d
 
 # ------------------------------------------------------------------------------
 # Install clojure
-RUN cd /tmp
-RUN curl -O https://download.clojure.org/install/linux-install-1.9.0.375.sh
-RUN chmod +x linux-install-1.9.0.375.sh
-RUN ./linux-install-1.9.0.375.sh
+RUN cd /tmp && \
+    curl -O https://download.clojure.org/install/linux-install-1.9.0.375.sh && \
+    chmod +x linux-install-1.9.0.375.sh && \
+    ./linux-install-1.9.0.375.sh
 
 # ------------------------------------------------------------------------------
 # Install leiningen
-RUN mkdir ~/bin && \
-    cd ~/bin && \
+RUN cd /usr/local/bin && \
     curl -O https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein && \
-    chmod a+x ~/bin/lein && \
-    ~/bin/lein
+    chmod a+x lein && \
+    lein
 
 
 # ------------------------------------------------------------------------------
