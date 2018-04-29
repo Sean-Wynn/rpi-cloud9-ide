@@ -5,7 +5,7 @@
 FROM resin/rpi-raspbian:jessie
 MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
 
-ENV PATH="/root/bin:${PATH}"
+ENV PATH="/root/bin:$PATH"
 
 # ------------------------------------------------------------------------------
 # Install dependencies
